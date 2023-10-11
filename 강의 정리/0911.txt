@@ -1,0 +1,14 @@
+0911
+
+
+
+git pull *깃에 만든 파일을 로컬로 동기화 (로컬에서 동기화 하지 않고 새로운 행동하면 컴플리트? 오류?남)
+
+package main
+
+import "fmt"
+
+func main() {
+   println("Hello Go!")
+   fmt.Println("OpenSours Programing~", "Go")
+}

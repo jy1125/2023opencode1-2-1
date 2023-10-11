@@ -1,0 +1,41 @@
+폴더 열 땐 해당 폴더 우클릭
+
+<용어>
+ls *폴더(파일) 확인
+git init *git 폴더 생성(변화 확인용)
+ls -al *안보이는 폴더까지 확인
+cd .git *git 폴더로 들어감
+cd . *현재 위치
+cd .. *위치 나가기
+pwd *현재 위치 확인
+clear *스와이프 (청소)
+q *나가기
+git commit *본인 정보 넣기 (1번만 사용함)
+ _git config --global user.email "이메일"
+ _git config --global user.name "이름"
+
+git status *상태변화가 있는 파일 체크 (빨강-준비x / 초록-준비o)
+ _동의 > git add 파일명(tab키 자동완성)
+       git add . *여러개 일 때 한번에 전체를 준비상태
+
+git commit -m "v0" *변화 된게 무엇인지 "이름" (-m, -u 는 옵션 느낌)
+
+git log *로그 내역 + 시간 + 해시코드(노란색)
+git checkout 해시코드 *그때로 돌아감 (타임머신)
+git checkout - *취소 (되돌리기)
+
+
+echo "뭐시기" >> README.md *깃허브에 파일 한줄소개 느낌
+cat README.md *한줄소개 보기
+git remote add origin 주소 *깃허브랑 연결 (주소는 깃허브 파일 생성 후 code)
+git push -u origin main *그동안 한 걸 깃허브에 저장
+ _git push (한 번 저장하면 다음부턴 이거만으로도 저장O)
+
+git clone 주소 *파일 안에 파일 통으로 생김 (누군가의 깃허브 주소를 가져와서 사용할 때)
+git clone 주소 . *현재 파일 안에 목록만 생김
+
+##git log
+깃허브와 연결 후 다른 파일 변화가 생겨서 다시 status와 commit 후 log 를 봤을 때 (origin/main)과 (head/main)위치가 다른 이유
+>깃허브 저장상태보다 로컬 저장을 먼저 하고 log를 보았기에 다시 git push를 하고 log를 보면 같은 위치에 있음
+
+git branch -M main *메인으로 바꿈
