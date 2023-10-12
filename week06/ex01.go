@@ -7,13 +7,13 @@ import (
 )
 
 func main() {
-	var c rune = '가'
+	var c rune = '가' 
 	//var a int16 = 7
 	//var a = 7
 	//a := 7
 	a := 7
 	var b float64 = 5.3
-	a = int(b) // Type Conversion, Casting
+	a = int(b) // Type Conversion, Casting 형변환
 	d := false
 
 	fmt.Println(d)

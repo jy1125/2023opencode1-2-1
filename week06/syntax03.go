@@ -51,7 +51,7 @@ func main() {
 // 	if err != nil { // 에러가 발생하면
 // 		log.Fatal(err)
 // 	}
-
+ㄴ
 // 	in = strings.TrimSpace(in)
 // 	//dan, err := strconv.ParseInt(in, 10, 32)
 // 	dan, err := strconv.Atoi(in)
