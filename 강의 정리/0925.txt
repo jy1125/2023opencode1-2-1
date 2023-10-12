@@ -1,0 +1,41 @@
+
+
+<랜덤 수 설정>
+rand.Seed(time.Now().Unix()) *현재 시간을 기준으로 시드값 설정
+ 
+answer := rand.Intn(100) + 1 *1~100 랜덤 정수 값 지정
+
+<input마냥 입력 받기>
+
+reader := bufio.NewReader(os.Stdin) *입력 할 수 있도록 만드는 함수
+
+변수명, 에러여부 := reader.ReadString *input마냥 작성 이건 string이라 문자열
+	ex)ReadString 말고 ReadInt 사용 못 함 
+		이유 > bufil.Reader에 ReadInt라는 메서드가 내장 X
+
+ - 에러가 나지 않게 하려면 
+1) 변수명 , _ := reader.ReadString *언더바로 에러 무시
+2) 변수명 , err := reader.ReadString 
+ 	if err != nil { *nil 은 값이 없음을 의미 함 
+	    log.Fatal(err)
+	}   *에러가 nil이 아니라면 log 패키지에서 에러를 출력하고 
+				Fatal로 프로그램 중지 후 에러메시지 출력
+
+<입력받은 걸 string타입으로 변환(위에 입력을 받은 변수를 지정하고 써야함)>
+변수값 = string.TrimSpace(바꿀 입력받은 변수) *string을 통해 문자열로 TrimSpace()는 앞뒤 공백 제거 (=strip()느낌)
+
+<입력받은 걸 int타입으로 변환(위에 입력을 받을 변수를 지정하고 써야함)>
+변수값, 에러여부 := strconv.Atoi(바꿀 변수명)
+ *strconv 는 문자열을 다양한 데이터로 바꾸는 함수 제공
+ * Atoi() 는 문자열을 정수로 바꾸는 함수
+
+<for>
+for i:= 0; i <= 10; i++{ *C랑 형식은 똑같음
+ 	내용 내용
+}
+
+<if>
+if i== 10 {  *for문 에서 반복 끝이면 그냥 하는.. 내가 만든 함수....
+	Println("문구 문구")
+	break
+}

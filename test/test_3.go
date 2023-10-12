@@ -39,9 +39,13 @@ func main() {
 		// string.TrimSpace() 문자열을 가공하는 함수+앞뒤 공백 제거
 		// TrimSpace() 는 파이선에서 strip()느낌
 
-		inputNumber, err := strconv.Atoi(inputNumberString) //여기서 err에 대한 처리를 따로 하지 않아서 문자열을 넣어도 그냥 무시 test_3
+		inputNumber, err := strconv.Atoi(inputNumberString)
+		if err != nil {
+			log.Fatal("정수를 입력하시오")
+		}
+	
 		//strconv는 문자열을 다양한 데이터로 바꾸는 함수 제공
-		//Atoi 는 문자열을 정수로 바꾸는 함수
+		//Atoi 는 문자열을정수로 바꾸는 함수
 
 		if inputNumber == answer {
 			fmt.Println(("정답~"))

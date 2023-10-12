@@ -12,3 +12,5 @@ func main() {
    println("Hello Go!")
    fmt.Println("OpenSours Programing~", "Go")
 }
+
+print와 Println의 차이 => print 는 줄바꿈 없이 옆으로 출력 Println은 줄바꿈 출력

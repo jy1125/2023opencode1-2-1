@@ -27,6 +27,7 @@ git checkout - *취소 (되돌리기)
 
 echo "뭐시기" >> README.md *깃허브에 파일 한줄소개 느낌
 cat README.md *한줄소개 보기
+
 git remote add origin 주소 *깃허브랑 연결 (주소는 깃허브 파일 생성 후 code)
 git push -u origin main *그동안 한 걸 깃허브에 저장
  _git push (한 번 저장하면 다음부턴 이거만으로도 저장O)
