@@ -1,8 +1,8 @@
 
 
-<랜덤 수 설정>
+<랜덤 수 설정 seed 패키지(time)>
 rand.Seed(time.Now().Unix()) *현재 시간을 기준으로 시드값 설정
- 
+rand.seed(seed)
 answer := rand.Intn(100) + 1 *1~100 랜덤 정수 값 지정
 
 <input마냥 입력 받기>

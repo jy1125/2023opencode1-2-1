@@ -1,0 +1,108 @@
+1002
+
+언더바표시 -> 사용하지 않은 거라 삭제 될 가능성 있음
+
+go mod init gowokr/파일명 *go 모듈을 초기화  + go.mod 파일 만들음 
+
+go build *컴파일 하겠다는 명령어
+.\파일명 (tab키 누르면 자동완성)
+
+
+<math>
+inport "math" *수학 함수 패키지 생성
+
+fmt.printlm(math.Ceil(2.71)) 
+
+Ceil - 올림
+Floor - 버림
+Round  -반올림 
+
+=> 선언을 하면 반드시써라 
+fmt.println("Helllo Go")
+
+<다른 함수>
+fmt.println(strings.Title("go git github java")
+*strings.Title 함수는 단어 앞글자 대문자로 바꾸는 함수
+
+<변수>
+var c rune = '가' *문자열은 ""을 사용하지만 rune은 ''사용
+fmt.println(c) *출력하게 되면 숫자가 뜸 -> '가'라고 하는 유니코드 값 
+fmt.pritnf("%c\n", c) *출력하면 가 출력 
+fmt.pritnf("%T\n", c) *자료형 나옴 출력하면 int32 결론은 유니코드 = int32
+
+ - int를 좀 더 디테일 하게 선언
+var a int16 = 7
+fmt.println(a) -> 7
+fmt.printf("%T\n",a) -> int16
+
+- 단축 선언
+a := 7.3 
+fmt.printf("%T\n",a) -> float
+a := 5
+fmt.printf("%T\n",a) -> float (값이 바뀌어도 형태는 그대로임 따지고 보면 5.0)
+ex) b:= 7 후 b:=7.5 로 바꾸면 오류 남 
+ 꼬우면 다른 변수로 형변환해서 담아라
+
+---------------------------------------------------------------------------------
+
+<reflect 패키지>
+fmt.println(reflect.TypeOf(변수))
+=fmt.printf("%T",변수)
+*둘 다 타입 출력
+
+<제로변수>
+var b float64(rune도 0)
+fmt.println(b) -> 0 *선언만 하고 값을 지정하지 않으면 0 반환
+var e string -> 공백
+var d bool -> false
+
+<변수> 
+대문자로 선언 시 외부 패키지에서도 접근 가능 아니 이걸 왜 또 하는거야 도대체가
+
+<strings 패키지>
+NewReplacer(바꾸고자하는 거, 바꿀 거)
+texts := "G@ M@ney"
+r := strings.NewReplacer("@","o") *strings 패키지 속 NewReplacer 가져옴
+newText := r.Replace(texts) *새로운 변수에 replace해서 바꿈
+fmt.println(newText) *바꾼 문구 출력
+
+<bufil, os 패키지>
+reader:= bufil.NewReader(os.Stdin) *운영체제 입력 -> 키보드로 입력받는걸 가져오는 버퍼
+in, _ := reader.ReadString('\n') *줄바꿈이 올 때까지 문자열로 읽어와서  in에 저장
+fmt.Println(in)
+
+ <log 패키지 : Fatal function을 쓰기 위해 사용함>
+-err
+
+fmt.Print("숫자 입력: ")
+rd := bufil.NewReader(os.Stdin)
+in, err := reader.ReadString('\n')
+log.Fatal(err) // 이렇게 하면 계속 에러 메시지 출력해서 밑에 출력값이 안나옴 
+fmt.println(in)
+
+err 이 nil이면 에러가 없다는 뜻 
+if err != nil { // 에러가 발생하면
+	log.Fatal(err)
+}
+
+<구구단>
+func main(){
+	fmt.Print("단 입력:")
+	rd := bufio.NewReader(os.Stdin)
+	in, err := rd.ReadString('\n')
+
+	if err != nil{ //에러가 발생하면
+		log.Fatal(err) //에러 메시지 나옴
+	}
+
+	in = strings.TrimSpace(in) //공백을 없앰 
+	dan, err := strconv.ParseInt(in, 32) //str으로 받은 숫자를 int32형식으로 바꿈
+	if err != nil{ //에러가 발생하면
+		log.Fatal(err) //에러 메시지 나옴
+	}
+		fmt.Println(dan * 2)
+	}
+-----------------------------------------------------------------------
+
+
+

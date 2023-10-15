@@ -1,0 +1,26 @@
+<shadowing>
+
+변수명을 float64로 쓰면 나중에 float64형식이 에러남
+
+패키지, 함수도 변수명으로 사용하면 오류 남
+
+바꿔서 써라.
+
+<함수호출>
+func sayHello() {
+	fmt.Println("Hello~")
+}
+
+func main(){
+	sayHello()
+}
+
+functions.go 파일 ㄱㄱ after확인 
+풀어쓰는 방법
+return 받아서 쓰는 방법
+차이점 알아두기
+
+func 함수이름 (입력 변수 타입)(리턴 형태타입){
+	내용
+}
+

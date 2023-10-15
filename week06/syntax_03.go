@@ -51,7 +51,7 @@ func main() {
 // 	if err != nil { // 에러가 발생하면
 // 		log.Fatal(err)
 // 	}
-ㄴ
+
 // 	in = strings.TrimSpace(in)
 // 	//dan, err := strconv.ParseInt(in, 10, 32)
 // 	dan, err := strconv.Atoi(in)
@@ -66,17 +66,9 @@ func main() {
 // 	}
 // }
 
-// package main
-
-// import (
-// 	"bufio"
-// 	"fmt"
-// 	"os"
-// )
-
-// func main() {
-// 	fmt.Print("숫자 입력 : ")
-// 	rd := bufio.NewReader(os.Stdin)
-// 	in, _ := rd.ReadString('\n')
-// 	fmt.Println(in)
-// }
+func main() {
+	fmt.Print("숫자 입력 : ")
+	rd := bufio.NewReader(os.Stdin)
+	in, _ := rd.ReadString('\n')
+	fmt.Println(in)
+}

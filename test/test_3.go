@@ -22,7 +22,7 @@ func main() {
 
 	for i := 0; i <= 10; i++ { //i가 10될때까지 반복
 		if i == 10 { //기회인 i가 10이 되면 끝
-			println("기회는 끝이다!!!!!!!")
+			println("기회는 끝!!!!!!!")
 			break
 		}
 
@@ -43,7 +43,7 @@ func main() {
 		if err != nil {
 			log.Fatal("정수를 입력하시오")
 		}
-	
+
 		//strconv는 문자열을 다양한 데이터로 바꾸는 함수 제공
 		//Atoi 는 문자열을정수로 바꾸는 함수
 
@@ -51,9 +51,9 @@ func main() {
 			fmt.Println(("정답~"))
 			break
 		} else if inputNumber < answer {
-			fmt.Println("그렇게 소심해서 뭐하니 얘야") //정답이 더 크다
+			fmt.Println("더 크게 불러 ㄱㄱ") //정답이 더 크다
 		} else if inputNumber > answer {
-			fmt.Println("그렇게 건방지면 되겠니?") //정답이 더 작다
+			fmt.Println("더 작게 불러봐") //정답이 더 작다
 		}
 
 	}
